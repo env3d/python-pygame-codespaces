@@ -1,0 +1,14 @@
+{
+    "name": "Desktop Lite Dev Container",
+    "image": "mcr.microsoft.com/devcontainers/universal:linux",
+    "features": {
+      "ghcr.io/devcontainers/features/desktop-lite:1": {}
+    },  
+    "postCreateCommand": "apt update -y && apt install apt install -y tigervnc-standalone-server xvfb fluxbox novnc websockify python3-pip",
+    "forwardPorts": [6080],
+    "portsAttributes": {
+      "6080": {
+        "label": "desktop"
+      }
+    }
+}
