@@ -1,4 +1,5 @@
 import pygame
+import math
 
 pygame.init()
 
@@ -11,7 +12,7 @@ pygame.display.set_caption("Moving Circle")
 x, y = WIDTH // 2, HEIGHT // 2
 radius = 30
 speed = 5
-
+timestep = 0;
 running = True
 while running:
     for event in pygame.event.get():
@@ -33,7 +34,8 @@ while running:
     screen.fill((30, 30, 30))
     
     # Draw circle
-    pygame.draw.circle(screen, (255, 0, 0), (x, y), radius)
+    pygame.draw.circle(screen, (255, 0, 0), (x, y), radius+abs(radius*math.cos(timestep)))
+    timestep += 0.01
     
     pygame.display.flip()
 

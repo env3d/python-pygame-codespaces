@@ -10,5 +10,12 @@
       "6080": {
         "label": "desktop"
       }
+    },
+    "customizations": {
+    "vscode": {
+      "settings": {
+        "workbench.explorer.hiddenViews": ["workbench.view.extensions"]
+      }
     }
+  }
 }
